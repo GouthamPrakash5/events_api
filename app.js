@@ -90,7 +90,7 @@ app.get('/events/:id', (req, res) => {
     });
 });
 
-// for updating products
+// for updating events
 
 
 app.put('/events/:id', (req, res) => {
@@ -118,7 +118,7 @@ app.put('/events/:id', (req, res) => {
 
 
 
-  // Update the product in the database
+  // Update the event in the database
   Event.findByIdAndUpdate(Id, { title, description, date })
       .then(() => {
           res.status(200).json({ message: 'Event updated successfully' });
@@ -130,7 +130,7 @@ app.put('/events/:id', (req, res) => {
 });
 
 
-//for deleting product
+//for deleting event
 
 
 app.delete('/events/:id', (req, res) => {
